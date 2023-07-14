@@ -30,20 +30,20 @@ text-align:center;
   background: #000000;
   animation: ldio-xj04k4g024 1s infinite cubic-bezier(0,0.5,0.5,1);
 }
-.ldio-xj04k4g024 div:nth-child(1) {
+.ldio-xj04k4g024 div:nth-of-type(1) {
   background: #28292f;
   transform: translate(148px,80px) scale(1);
   animation: ldio-xj04k4g024-r 0.25s infinite cubic-bezier(0,0.5,0.5,1), ldio-xj04k4g024-c 1s infinite step-start;
-}.ldio-xj04k4g024 div:nth-child(2) {
+}.ldio-xj04k4g024 div:nth-of-type(2) {
   animation-delay: -0.25s;
   background: #000000;
-}.ldio-xj04k4g024 div:nth-child(3) {
+}.ldio-xj04k4g024 div:nth-of-type(3) {
   animation-delay: -0.5s;
   background: #28292f;
-}.ldio-xj04k4g024 div:nth-child(4) {
+}.ldio-xj04k4g024 div:nth-of-type(4) {
   animation-delay: -0.75s;
   background: #000000;
-}.ldio-xj04k4g024 div:nth-child(5) {
+}.ldio-xj04k4g024 div:nth-of-type(5) {
   animation-delay: -1s;
   background: #000000;
 }
@@ -69,8 +69,8 @@ text-align:center;
 const Loader = () => {
   return (
     <Loading>
-      <div class="loadingio-spinner-ellipsis-pcubhivnvfr">
-        <div class="ldio-xj04k4g024">
+      <div className="loadingio-spinner-ellipsis-pcubhivnvfr">
+        <div className="ldio-xj04k4g024">
           <div></div>
           <div></div>
           <div></div>

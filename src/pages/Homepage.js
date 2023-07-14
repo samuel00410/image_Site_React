@@ -3,6 +3,7 @@ import Search from "../components/Search";
 import Picture from "../components/Picture";
 import Loader from "../components/Loader";
 import axios from "axios";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Homepage = () => {
   const API_Key = process.env.REACT_APP_APIKEY;
@@ -54,16 +55,20 @@ const Homepage = () => {
           handleSearch(searchURL);
         }}
       />
-      {/* <Loader /> */}
-      <div className="pictures">
-        {data &&
-          data.map((d) => {
-            return <Picture data={d} />;
-          })}
-      </div>
-      <div className="morePicture">
-        <button onClick={morePicture}>更多圖片</button>
-      </div>
+      {data && (
+        <InfiniteScroll
+          dataLength={data.length}
+          next={morePicture}
+          hasMore={true}
+          loader={<Loader />}
+        >
+          <div className="pictures">
+            {data.map((d) => {
+              return <Picture data={d} key={d.id} />;
+            })}
+          </div>
+        </InfiniteScroll>
+      )}
     </div>
   );
 };
