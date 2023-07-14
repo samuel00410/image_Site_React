@@ -1,0 +1,22 @@
+nav {
+  background-color: black;
+  ul {
+    display: flex;
+    justify-content: end;
+    margin-right: 2rem;
+    li {
+      padding: 0.5rem 1rem;
+      a {
+        color: rgb(227, 227, 220);
+        font-size: 1.25rem;
+        text-decoration: none;
+        &:hover {
+          cursor: grab;
+          text-decoration: underline;
+          opacity: 0.5;
+        }
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
